@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import { async } from 'q';
+import idl from './idl.json';
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
