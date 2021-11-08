@@ -2,9 +2,32 @@ import { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import { async } from 'q';
+
+import { Connection, PublicKey, clusterApiUrl} from '@solana/web3.js';
+import {
+  Program, Provider, web3
+} from '@project-serum/anchor';
+
 import idl from './idl.json';
 
 // Constants
+// SystemProgram is a reference to the Solana runtime!
+const { SystemProgram, Keypair } = web3;
+
+// Create a keypair for the account that will hold the GIF data.
+let baseAccount = Keypair.generate();
+
+// Get our program's id form the IDL file.
+const programID = new PublicKey(idl.metadata.address);
+
+// Set our network to devent.
+const network = clusterApiUrl('devnet');
+
+// Control's how we want to acknowledge when a trasnaction is "done".
+const opts = {
+  preflightCommitment: "processed"
+}
+
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const TEST_GIFS = [
