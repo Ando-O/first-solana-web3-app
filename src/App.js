@@ -79,6 +79,14 @@ const App = () => {
     setInputValue(value);
   };
 
+  const getProvider = () => {
+    const connection = new Connection(network, opts.preflightCommitment);
+    const provider = new Provider(
+      connection, window.solana, opts.preflightCommitment,
+    );
+	    return provider;
+  }
+
   const renderConnectedContainer = () => (
     <div className="connected-container">
       <input
