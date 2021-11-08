@@ -11,7 +11,7 @@ import {
 import idl from './idl.json';
 
 // Constants
-// SystemProgram is a reference to the Solana runtime!
+// SystemProgram is a reference to the Solana runtime.
 const { SystemProgram, Keypair } = web3;
 
 // Create a keypair for the account that will hold the GIF data.
@@ -142,7 +142,7 @@ const App = () => {
         </div>
       )
     } 
-	  // Otherwise, we're good! Account exists. User can submit GIFs.
+	  //Account exists. User can submit GIFs.
 	  else {
       return(
         <div className="connected-container">
@@ -199,7 +199,7 @@ const App = () => {
 
   return (
     <div className="App">
-			{/* This was solely added for some styling fanciness */}
+			{/* Added for styling */}
 			<div className={walletAddress ? 'authed-container' : 'container'}>
         <div className="header-container">
           <p className="header">🖼 GIF Portal</p>
