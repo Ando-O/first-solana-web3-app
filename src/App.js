@@ -33,7 +33,7 @@ const opts = {
   preflightCommitment: "processed"
 }
 
-const TWITTER_HANDLE = '_buildspace';
+const TWITTER_HANDLE = 'AndoWords';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const TEST_GIFS = [
 	'https://i.giphy.com/media/eIG0HfouRQJQr1wBzz/giphy.webp',
@@ -223,14 +223,23 @@ const App = () => {
 			{/* Added for styling */}
 			<div className={walletAddress ? 'authed-container' : 'container'}>
         <div className="header-container">
-          <p className="header">🖼 GIF Portal</p>
+          <p className="header">Ando's...Labyrinth</p>
           <p className="sub-text">
-            View your GIF collection in the metaverse ✨
+            GIF_JIFS_INTO_THE_LABYRINTH
           </p>
+          
+          {/** styling for glitch effect */}
+        <div classname="holder" onmouseover="glitch()">
+          <div classname="glitch">
+          GLITCH
+          </div>
+        </div>
+
           {/* Add the condition to show this only if we don't have a wallet address */}
           {!walletAddress && renderNotConnectedContainer()}
           {walletAddress && renderConnectedContainer()}
         </div>
+        
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
@@ -238,7 +247,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`built by @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>
