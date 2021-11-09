@@ -223,17 +223,15 @@ const App = () => {
 			{/* Added for styling */}
 			<div className={walletAddress ? 'authed-container' : 'container'}>
         <div className="header-container">
-          <p className="header">Ando's...Labyrinth</p>
+          <p className="header">
+          <span aria-hidden="true">Ando's...Labyrinth
+          </span>Ando's...Labyrinth<span aria-hidden="true">Ando's...Labyrinth</span>
+          </p>
           <p className="sub-text">
-            GIF_JIFS_INTO_THE_LABYRINTH
+            Submit-Thy-Jifs <br />
+            Fit-The-Theme 
           </p>
           
-          {/** styling for glitch effect */}
-        <div classname="holder" onmouseover="glitch()">
-          <div classname="glitch">
-          GLITCH
-          </div>
-        </div>
 
           {/* Add the condition to show this only if we don't have a wallet address */}
           {!walletAddress && renderNotConnectedContainer()}
