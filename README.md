@@ -1,11 +1,11 @@
 This project was part of _buildspace's **Build a Web3 app on Solana with React and Rust** EXPERIENCE.
 
-A Solana *program* (similiar to contracts in Ethereum) was deployed that allows visitors to connect their Phantom wallets on Solana's Devnet.
+A Solana *program* (similiar to contracts in Ethereum) was deployed that allows visitors to<br> connect their Phantom wallets on Solana's Devnet.<br>
 The Solana program stores gif-link data that users submitted on the blockchain. 
 
-Some design aspects were different for this project. 
-The theme was MC Escher, and the background image was itself a gif.
-Header text and buttons were all designed with a glitch effect.
+Some design aspects were different for this project.<br>
+The theme was MC Escher, and the background image was itself a gif.<br>
+Header text and buttons were all designed with a glitch effect.<br>
 
 WARNING: You might get a little dizzy going into this *Labyrinth*.
 
