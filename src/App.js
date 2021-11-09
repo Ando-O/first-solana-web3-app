@@ -229,7 +229,8 @@ const App = () => {
           </p>
           <p className="sub-text">
             Submit-Thy-Jifs <br />
-            Fit-The-Theme 
+            Dedicated to- <br />
+            Maurits Cornelis 
           </p>
           
 

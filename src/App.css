@@ -127,7 +127,7 @@
 }
 
 .sub-text {
-  font-size: 60px;
+  font-size: 40px;
   color: white;
 }
 
@@ -138,7 +138,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.cta-button {
+/* .cta-button {
   height: 45px;
   border: 0;
   width: auto;
@@ -149,16 +149,124 @@
   font-size: 16px;
   font-weight: bold;
   color: white;
+} */
+
+/* butt-Glitch */
+.cta-button, cta-button::after {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Monoton';
+  color: rgb(255, 255, 255);
+  position: relative;
+
+  text-shadow:
+    0.05em 0 0 rgba(10, 10, 10, 0.75),
+    -0.025em -0.05em 0 rgb(191, 228, 238),
+    0.025em 0.05em 0 rgba(0,0,255,.75);
+  
+  /* height: 45px;
+  border: 0; */
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  /* font-size: 16px; */
+
+  /* background: linear-gradient(45deg, transparent 5%, #FF013C 5%); */
+  /* border: 0; */
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 88px;
+  /* box-shadow: 6px 0px 0px #00E6F6; */
+  outline: transparent;
+  position: relative;
 }
 
+.cta-button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'Phantom Devnet';
+  display: block;
+  position: absolute;
+  top: 0;
+  /* left: 0;
+  right: 0;
+  bottom: 0; */ 
+  /* background: linear-gradient(transparent 3%, rgb(208, 238, 240) 3%, rgb(214, 214, 214) 5%, rgb(151, 88, 235) 5%); */
+  text-shadow: -3px -3px 0px rgba(221, 237, 241, 0.377), 3px 3px 0px rgb(123, 36, 238);
+  font-weight: bold;
+  clip-path: var(--slice-0);
+}
+
+button:hover::after {
+  animation: 5s butt-glitch;
+  animation-timing-function: steps(3, end);
+}
+
+@keyframes butt-glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(100px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+/* butt-Glitch */
+
+
 .connect-wallet-button {
-  background: -webkit-linear-gradient(left, #60c657, #35aee2);
+  background: -webkit-linear-gradient(left, #919291, #90acf7);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
 
 .submit-gif-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  background: -webkit-linear-gradient(left, #919291, #90acf7);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-left: 10px;
@@ -224,8 +332,25 @@
   border: none;
   border-radius: 10px;
   margin: 50px auto;
+  font-family: Monoton;
 }
 
 .connected-container button {
   height: 50px;
+}
+
+/* for mobile */
+@media screen and (max-width: 415px) {
+  .header {
+    margin: 0;
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .sub-text {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  }
 }
